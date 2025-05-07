@@ -1,0 +1,101 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  VETERINARIAN
+  ADMIN
+}
+
+model User {
+  id          String   @id @default(uuid())
+  name        String
+  role        Role
+  email       String   @unique
+  password    String
+  zipCode     String
+  street      String
+  neighborhood String
+  state       String
+  complement  String?
+  phone       String
+  profilePhoto String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Paciente {
+  id              String   @id @default(uuid())
+  fotoPerfil     String?
+  nomeAnimal     String
+  nomeTutor      String
+  especie        String
+  raca           String
+  dataNascimento DateTime
+  idade          Int
+  peso           Float
+  cep            String
+  estado         String
+  rua            String
+  bairro         String
+  numero         String
+  complemento    String?
+  telefones      String[]
+  emails         String[]
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  vacinas         Vacina[]
+  consultas       Consulta[]
+  acompanhamentos Acompanhamento[]
+}
+
+model Produto {
+  id            String   @id @default(uuid())
+  nome          String
+  dose          String
+  precoCaixa    Float 
+  precoUnitario Float
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model Vacina {
+  id            String    @id @default(uuid())
+  pacienteId    String
+  paciente      Paciente  @relation(fields: [pacienteId], references: [id], onDelete: Cascade)
+  nome          String
+  dose          String
+  dataAplicacao DateTime
+  validade      DateTime?
+  observacao    String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}
+
+model Consulta {
+  id           String   @id @default(uuid())
+  paciente     Paciente @relation(fields: [pacienteId], references: [id], onDelete: Cascade)
+  pacienteId   String
+  descricao    String
+  dataHora     DateTime
+  diagnostico  String
+  observacao   String?
+  createdAt    DateTime @default(now())
+}
+
+model Acompanhamento {
+  id           String   @id @default(uuid())
+  pacienteId   String
+  paciente     Paciente @relation(fields: [pacienteId], references: [id], onDelete: Cascade)
+  descricao    String
+  dataHora     DateTime
+  diagnostico  String
+  observacao   String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
