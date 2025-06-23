@@ -1,5 +1,5 @@
 import { FastifyRequest, FastifyReply } from 'fastify'
-import { UserService } from '../service/user-service'
+import { UserService } from '../service/user-service.js'
 import { z } from 'zod'
 import jwt from 'jsonwebtoken'
 

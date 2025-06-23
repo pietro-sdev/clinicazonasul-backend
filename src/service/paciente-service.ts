@@ -1,7 +1,7 @@
-import { PacienteRepository } from '../repository/paciente-repository'
-import { cloudinary } from '../lib/cloudinary'
+import { PacienteRepository } from '../repository/paciente-repository.js'
+import { cloudinary } from '../lib/cloudinary.js'
 import type { UploadApiResponse } from 'cloudinary'
-import { Paciente } from '../model/Pacients'
+import { Paciente } from '../model/Pacients.js'
 
 async function uploadFoto(buf: Buffer): Promise<string> {
   const res: UploadApiResponse = await new Promise((ok, err) =>

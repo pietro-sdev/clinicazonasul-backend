@@ -1,6 +1,6 @@
 import { FastifyRequest, FastifyReply } from 'fastify'
 import { z } from 'zod'
-import { VacinaService } from '../service/vacina-service'
+import { VacinaService } from '../service/vacina-service.js'
 
 const bodySchema = z.object({
   nome:          z.string(),

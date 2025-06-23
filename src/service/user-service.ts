@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken'
-import { UserRepository } from '../repository/user-repository'
-import { AuthenticatedUser } from '../model/User'
+import { UserRepository } from '../repository/user-repository.js'
+import { AuthenticatedUser } from '../model/User.js'
 import bcrypt from 'bcryptjs'
 
 const JWT_SECRET = process.env.JWT_SECRET || 'default_secret'

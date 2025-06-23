@@ -1,13 +1,13 @@
 import { FastifyInstance } from 'fastify'
-import { authRoutes } from './auth-routes'
-import { userRoutes } from './user-routes'
-import { pacienteRoutes } from './paciente-routes'
-import { produtoRoutes } from './produto-routes'
-import { userPhotoRoutes } from './user-photo-routes'
-import { vacinaRoutes } from './vacina-routes'
-import { consultaRoutes } from './consulta-routes'
-import { acompanhamentoRoutes } from './acompanhamento-routes'
-import { dashboardRoutes } from './dashboard-routes'
+import { authRoutes } from './auth-routes.js'
+import { userRoutes } from './user-routes.js'
+import { pacienteRoutes } from './paciente-routes.js'
+import { produtoRoutes } from './produto-routes.js'
+import { userPhotoRoutes } from './user-photo-routes.js'
+import { vacinaRoutes } from './vacina-routes.js'
+import { consultaRoutes } from './consulta-routes.js'
+import { acompanhamentoRoutes } from './acompanhamento-routes.js'
+import { dashboardRoutes } from './dashboard-routes.js'
 
 export async function registerRoutes(app: FastifyInstance) {
   app.register(authRoutes)

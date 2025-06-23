@@ -1,5 +1,5 @@
-import { prisma } from '../prisma/client'
-import { DashboardSummary } from '../model/Dashboard'
+import { prisma } from '../prisma/client.js'
+import { DashboardSummary } from '../model/Dashboard.js'
 
 export class DashboardRepository {
   async getResumo(): Promise<DashboardSummary> {

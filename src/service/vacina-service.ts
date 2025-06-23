@@ -1,5 +1,5 @@
-import { VacinaRepository } from '../repository/vacina-repository'
-import { prisma } from '../prisma/client'
+import { VacinaRepository } from '../repository/vacina-repository.js'
+import { prisma } from '../prisma/client.js'
 
 export const VacinaService = {
   async createVacina(data: {

@@ -1,6 +1,6 @@
-import { prisma } from '../prisma/client'
-import { Acompanhamento } from '../model/Acompanhamento'
-import { CreateAcompanhamentoInput } from '../service/acompanhamento-service'
+import { prisma } from '../prisma/client.js'
+import { Acompanhamento } from '../model/Acompanhamento.js'
+import { CreateAcompanhamentoInput } from '../service/acompanhamento-service.js'
 
 export class AcompanhamentoRepository {
   async create(data: CreateAcompanhamentoInput): Promise<Acompanhamento> {

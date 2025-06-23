@@ -1,5 +1,5 @@
-import { cloudinary } from '../lib/cloudinary'
-import { UserRepository } from '../repository/user-repository'
+import { cloudinary } from '../lib/cloudinary.js'
+import { UserRepository } from '../repository/user-repository.js'
 import type { UploadApiResponse } from 'cloudinary'
 
 export const UserPhotoService = {

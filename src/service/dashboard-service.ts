@@ -1,5 +1,5 @@
-import { DashboardRepository } from '../repository/dashboard-repository'
-import { DashboardSummary } from '../model/Dashboard'
+import { DashboardRepository } from '../repository/dashboard-repository.js'
+import { DashboardSummary } from '../model/Dashboard.js'
 
 export class DashboardService {
   constructor(private repo: DashboardRepository) {}

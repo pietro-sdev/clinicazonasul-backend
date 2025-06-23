@@ -1,4 +1,4 @@
-import { ConsultaRepository } from '../repository/consulta-repository'
+import { ConsultaRepository } from '../repository/consulta-repository.js'
 
 export const ConsultaService = {
   async addConsulta(pacienteId: string, payload: {

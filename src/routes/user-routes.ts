@@ -1,5 +1,5 @@
 import { FastifyInstance } from 'fastify'
-import { UserController } from '../controller/user-controller'
+import { UserController } from '../controller/user-controller.js'
 
 export async function userRoutes(app: FastifyInstance) {
   app.get('/me', UserController.me)

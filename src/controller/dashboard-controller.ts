@@ -1,6 +1,6 @@
 import { FastifyRequest, FastifyReply } from 'fastify'
-import { DashboardService } from '../service/dashboard-service'
-import { DashboardRepository } from '../repository/dashboard-repository'
+import { DashboardService } from '../service/dashboard-service.js'
+import { DashboardRepository } from '../repository/dashboard-repository.js'
 
 const service = new DashboardService(new DashboardRepository())
 

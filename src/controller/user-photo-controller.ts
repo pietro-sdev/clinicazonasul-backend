@@ -1,7 +1,7 @@
 import { FastifyRequest, FastifyReply } from 'fastify'
 import type { MultipartFile } from '@fastify/multipart'
 import jwt from 'jsonwebtoken'
-import { UserPhotoService } from '../service/user-photo-service'
+import { UserPhotoService } from '../service/user-photo-service.js'
 
 export const UserPhotoController = {
   async upload(req: FastifyRequest, reply: FastifyReply) {

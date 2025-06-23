@@ -1,6 +1,6 @@
 // acompanhamento-service.ts
-import { AcompanhamentoRepository } from '../repository/acompanhamento-repository'
-import { Acompanhamento } from '../model/Acompanhamento'
+import { AcompanhamentoRepository } from '../repository/acompanhamento-repository.js'
+import { Acompanhamento } from '../model/Acompanhamento.js'
 
 export interface CreateAcompanhamentoInput {
   descricao: string

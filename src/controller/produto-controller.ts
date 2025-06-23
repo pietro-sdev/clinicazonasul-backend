@@ -1,5 +1,5 @@
 import { FastifyRequest, FastifyReply } from 'fastify'
-import { ProdutoService } from '../service/produto-service'
+import { ProdutoService } from '../service/produto-service.js'
 import { z } from 'zod'
 
 const schema = z.object({

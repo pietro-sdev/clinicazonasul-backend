@@ -1,4 +1,4 @@
-import { ProdutoController } from '../controller/produto-controller'
+import { ProdutoController } from '../controller/produto-controller.js'
 import { FastifyInstance } from 'fastify'
 
 export async function produtoRoutes(fastify: FastifyInstance) {

@@ -1,4 +1,4 @@
-import { ProdutoRepository } from '../repository/produto-repository'
+import { ProdutoRepository } from '../repository/produto-repository.js'
 
 export const ProdutoService = {
   list() {

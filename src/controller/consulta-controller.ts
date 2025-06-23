@@ -1,6 +1,6 @@
 import { FastifyRequest, FastifyReply } from 'fastify'
 import { z } from 'zod'
-import { ConsultaService } from '../service/consulta-service'
+import { ConsultaService } from '../service/consulta-service.js'
 
 const bodySchema = z.object({
   descricao:   z.string().min(1),

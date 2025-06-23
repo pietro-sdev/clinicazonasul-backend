@@ -1,8 +1,8 @@
 // src/controller/auth-controller.ts
 import { FastifyRequest, FastifyReply } from 'fastify'
 import { z } from 'zod'
-import { AuthService } from '../service/auth-service'
-import { UserService } from '../service/user-service'
+import { AuthService } from '../service/auth-service.js'
+import { UserService } from '../service/user-service.js'
 
 /**
  * Configurações de cookie usadas em todo o controller

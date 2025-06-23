@@ -1,5 +1,5 @@
 import { FastifyInstance } from 'fastify'
-import { VacinaController } from '../controller/vacina-controller'
+import { VacinaController } from '../controller/vacina-controller.js'
 
 export async function vacinaRoutes(app: FastifyInstance) {
   app.post('/pacientes/:pacienteId/vacinas', VacinaController.create)

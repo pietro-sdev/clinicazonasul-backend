@@ -1,5 +1,5 @@
 import { FastifyRequest, FastifyReply } from 'fastify'
-import { PacienteService } from '../service/paciente-service'
+import { PacienteService } from '../service/paciente-service.js'
 import { z } from 'zod'
 
 const createSchema = z.object({

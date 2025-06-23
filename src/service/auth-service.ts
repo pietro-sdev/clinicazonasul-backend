@@ -1,5 +1,5 @@
-import { UserRepository } from '../repository/user-repository'
-import { LoginInput } from '../model/LoginInput'
+import { UserRepository } from '../repository/user-repository.js'
+import { LoginInput } from '../model/LoginInput.js'
 import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
 

@@ -1,5 +1,5 @@
 import { FastifyInstance } from 'fastify'
-import { PacienteController } from '../controller/paciente-controller'
+import { PacienteController } from '../controller/paciente-controller.js'
 
 export async function pacienteRoutes(fastify: FastifyInstance) {
   fastify.post('/pacientes', PacienteController.create)

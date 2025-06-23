@@ -1,7 +1,7 @@
 import { FastifyRequest, FastifyReply } from 'fastify'
 import { z } from 'zod'
-import { AcompanhamentoRepository } from '../repository/acompanhamento-repository'
-import { AcompanhamentoService } from '../service/acompanhamento-service'
+import { AcompanhamentoRepository } from '../repository/acompanhamento-repository.js'
+import { AcompanhamentoService } from '../service/acompanhamento-service.js'
 
 const repo = new AcompanhamentoRepository()
 const service = new AcompanhamentoService(repo)
