@@ -10,30 +10,22 @@ dotenv.config()
 const app = Fastify()
 
 app.register(cors, {
-  origin: true,
+  origin: [
+    'https://clinicazonasul-frontend.vercel.app',
+    'http://localhost:3000',
+  ],
   credentials: true,
 })
 
-app.register(cookie, {
-  secret: process.env.COOKIE_SECRET || 'default_cookie_secret',
-  parseOptions: {
-    sameSite: 'lax',
-    httpOnly: true,
-    secure: process.env.NODE_ENV === 'production',
-    path: '/',
-  },
-})
-
-app.register(multipart, {
-  limits: { fileSize: 5 * 1024 * 1024 },
-})
+app.register(cookie /*, { secret: '…' } */)   // sem parseOptions aqui
+app.register(multipart, { limits: { fileSize: 5 * 1024 * 1024 } })
 
 app.register(registerRoutes)
 
-app.listen({ port: 3333, host: '0.0.0.0' }, (err, address) => {
+app.listen({ port: 3333 }, err => {
   if (err) {
     console.error(err)
     process.exit(1)
   }
-  console.log(`🚀 Servidor rodando em ${address}`)
+  console.log('🚀 Servidor rodando em http://localhost:3333')
 })
