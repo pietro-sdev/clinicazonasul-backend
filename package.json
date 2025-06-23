@@ -7,7 +7,10 @@
     "dev": "nodemon --watch src --ext ts --exec tsx src/server.ts",
     "build": "tsc",
     "start": "node dist/server.js",
-    "prisma": "prisma"
+    "prisma": "prisma",
+    "migrate": "prisma migrate deploy",
+    "seed": "tsx src/seed/create-user.ts",
+    "deploy": "npm run migrate && npm run seed && npm run start"
   },
   "dependencies": {
     "@fastify/cookie": "^11.0.2",
