@@ -3,7 +3,7 @@ import cors from '@fastify/cors'
 import cookie from '@fastify/cookie'
 import multipart from '@fastify/multipart'
 import dotenv from 'dotenv'
-import { registerRoutes } from './routes/index.js'
+import { registerRoutes } from './routes'
 
 dotenv.config()
 
@@ -22,7 +22,7 @@ app.register(multipart, { limits: { fileSize: 5 * 1024 * 1024 } })
 
 app.register(registerRoutes)
 
-app.listen({ port: 3333 }, err => {
+app.listen({ port: 3333, host:'0.0.0.0' }, err => {
   if (err) {
     console.error(err)
     process.exit(1)
