@@ -3,7 +3,7 @@ import cors from '@fastify/cors'
 import cookie from '@fastify/cookie'
 import multipart from '@fastify/multipart'
 import dotenv from 'dotenv'
-import { registerRoutes } from './routes'
+import { registerRoutes } from './routes/index.js'
 
 dotenv.config()
 
